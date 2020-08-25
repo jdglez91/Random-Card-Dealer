@@ -14,3 +14,38 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+body {
+  background-color: green;
+}
+
+div.card {
+  background-color: white;
+  width: 400px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 230px;
+  position: fixed;
+  font-size: 110px;
+}
+
+div.toplogo {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-size: 80px;
+}
+div.bottomlogo {
+  position: absolute;
+  bottom: -15px;
+  right: 20px;
+  font-size: 80px;
+}
+.card.spade.toplogo {
+  content: "\2660";
+}
