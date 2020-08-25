@@ -7,6 +7,12 @@ import "../style/index.scss";
 
 window.onload = function() {
   document.querySelector(".number").innerHTML = generateRandomNumber();
+  let suits = document.querySelectorAll(".suit");
+  let randomSuit = generateRandomSuit();
+  for (let suit of suits) {
+    suit.innerHTML = randomSuit.suit;
+    suit.style.color = randomSuit.color;
+  }
   //document.querySelectorAll("#symbol").classList.add(generateRandomSuit());
   //document.querySelector(".bottomlogo").innerHTML = generateRamdonSuit();
 };
@@ -32,7 +38,12 @@ let generateRandomNumber = () => {
 };
 
 let generateRandomSuit = () => {
-  var suit = ["spade", "diamond", "heart", "club"];
-  let indexSuit = Math.floor(Math.random() * suit.length);
-  return suit[indexSuit];
+  var pokersuit = [
+    { suit: "♠️", color: "black" },
+    { suit: "♦️", color: "red" },
+    { suit: "♥️", color: "red" },
+    { suit: "♣️", color: "black" }
+  ];
+  let indexSuit = Math.floor(Math.random() * pokersuit.length);
+  return pokersuit[indexSuit];
 };
